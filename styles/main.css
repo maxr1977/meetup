@@ -69,8 +69,6 @@ input.search-form__input:not(:placeholder-shown) {
  
 }
 
-
-
 .search-form__location {
    padding: 10px 17px;
    border-left: 1px solid #d9d9d9;
@@ -102,6 +100,13 @@ input.search-form__input:not(:placeholder-shown) {
    color: #212121;
 }
 
+.actions-header__link-language:hover {
+   color: #006977;
+ }
+
+.actions-header__link-language:hover .svg-language {
+   fill: #006977;
+}
 
 .actions-header {
    display: flex;
@@ -109,3 +114,38 @@ input.search-form__input:not(:placeholder-shown) {
    align-items: center;
    flex-wrap: wrap;
 }
+
+/* maim */
+/* section meetup */
+[class*="__display"] {
+   margin-top: 65px;
+}
+.meetup__display {
+   display: grid;
+   grid-template-columns: 1fr 45%;
+   column-gap: 55px;
+   
+}
+
+.meetup__content {
+display: flex;
+flex-direction: column;
+gap: 25px;
+}
+
+.title_h1 {
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 1.24;
+}
+
+.meetup-descr {}
+
+.meetup__button {}
+
+.button {}
+
+.meetup__img {
+   
+}
+
