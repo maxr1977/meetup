@@ -8,6 +8,7 @@ body {
    font-weight: 400;
    color: #212121;
    background-color: #FFFFFF;
+   
 }
 
 .wrapper {
@@ -24,6 +25,7 @@ body {
    max-inline-size: 1230px;
    margin-inline: auto;
    padding-inline: 15px;
+   
 }
 
 /* header */
@@ -35,6 +37,13 @@ grid-template-columns: auto 1fr auto;
 padding-block: 11px;
 padding-inline: 30px;
 gap: 30px;
+}
+
+@media (max-width: 1300px) {
+.header__container {
+      max-inline-size: 1230px;
+      
+   }
 }
 
 .search-form {
@@ -133,19 +142,119 @@ flex-direction: column;
 gap: 25px;
 }
 
-.title_h1 {
-   font-weight: 700;
-   font-size: 42px;
-   line-height: 1.24;
+
+
+/* section events */
+.evens__header {
+   display: grid;
+   grid-template-columns: auto auto 1fr;
+   gap: 16px;
+   align-items: center;
+    
+}
+.event-link {
+justify-self: end;
+}
+.location {
+display: flex;
+gap: 15px;
+background: rgba(151, 202, 209, 0.12);
+padding: 11px 12px 8px 12px;
+border-radius: 8px;
+}
+.events__items {
+   margin-top: 26px;
+   display: grid;
+   gap: 36px;
+   grid-template-columns: repeat(auto-fill, minmax(min(272px, 100%), 1fr));
 }
 
-.meetup-descr {}
-
-.meetup__button {}
-
-.button {}
-
-.meetup__img {
-   
+.item-event__link-image {
+   display: block;
+   overflow: hidden;
+   border-radius: 8px;
 }
 
+.item-event__image {
+   transition: transform 0.5s;
+   width: 100%;
+   object-fit: cover;
+}
+
+.item-event__image:hover {
+   transform: scale(1.05);
+}
+
+.date, .info, .going, .free {
+   display: flex;
+   gap: 6px;
+}
+
+.info
+ {
+   display: flex;
+   gap: 15px;
+   margin-top: 4px;
+}
+.item-event__body{
+   margin-top: 12px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+/* section events-online */
+.evens-online__header {
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: center;
+
+}
+
+.event-online-link {
+   justify-self: end;
+}
+
+/* section membership */
+.membership__display {
+   display: grid;
+   grid-template-columns: 1fr 35%;
+   column-gap: 55px;
+   background: rgba(151, 202, 209, 0.08);
+   border-radius: 8px;
+   padding: 36px 56px;
+
+
+}
+
+.membership__content {
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+
+@media (max-width: 393px) {
+  .header__search {
+   display: none;
+  }
+
+   .meetup__display {
+   grid-template-columns: 1fr;
+   row-gap: 20px;
+   }
+   .event-link {
+      display: none;
+   }
+   .title_h2 {
+      font-size: 20px;
+   }
+   .title_h3 {
+      font-size: 13px;
+   }
+
+   .location img {
+      width: 16px;
+      height: 16px;
+   }
+}
