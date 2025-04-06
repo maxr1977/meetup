@@ -145,7 +145,7 @@ gap: 25px;
 
 
 /* section events */
-.evens__header {
+.events__header {
    display: grid;
    grid-template-columns: auto auto 1fr;
    gap: 16px;
@@ -204,7 +204,7 @@ border-radius: 8px;
 }
 
 /* section events-online */
-.evens-online__header {
+.events-online__header {
    display: grid;
    grid-template-columns: auto auto;
    align-items: center;
@@ -231,6 +231,239 @@ border-radius: 8px;
    display: flex;
    flex-direction: column;
    gap: 25px;
+}
+
+/* section categories */
+.categories__items {
+   display: flex;
+   gap: 16px;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 26px;
+   
+}
+.categories__item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 22px 8px;
+   background: rgba(151, 202, 209, 0.08);
+   border-radius: 8px;
+   width: 135px;
+   gap: 10px;
+   
+   
+}
+.categories__title {
+   text-align: center;
+}
+
+/* section cities */
+.cities__items {
+   margin-top: 28px;
+   display: grid;
+   gap: 41px;
+   grid-template-columns: repeat(auto-fill, minmax(min(205px, 100%), 1fr));
+   justify-items: center;
+   
+}
+
+.cities__item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 25px;
+}
+.cities-item__link-image {
+   display: block;
+   overflow: hidden;
+   border-radius: 50%;
+  
+}
+
+.cities-item__image {
+   transition: transform 0.5s;
+   width: 100%;
+   object-fit: cover;
+}
+
+.cities-item__image:hover {
+   transform: scale(1.05);
+}
+
+.link-cities {
+   color: #212121;
+}
+
+.link-cities:hover {
+   color: #006977;
+}
+.cities-title {
+   line-height: 1.40;
+   text-align: center;
+}
+.cities-descr {
+   margin-top: 20px;
+}
+
+/* section work */
+.work__items {
+   display: flex;
+   gap: 32px;
+   margin-top: 26px;
+   /* flex-wrap: wrap; */
+}
+
+.work__item {
+   display: flex;
+   padding: 32px 112px 32px 24px;
+   background: rgba(151, 202, 209, 0.08);
+   border-radius: 8px;
+   gap: 24px;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+.work__content{
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+
+/* section articles */
+.articles__items {
+   margin-top: 28px;
+   display: grid;
+   gap: 32px;
+   grid-template-columns: repeat(auto-fill, minmax(min(376px, 100%), 1fr));
+}
+
+.articles-item__link-image {
+   display: block;
+   overflow: hidden;
+   border-radius: 8px;
+}
+
+.articles-item__image {
+   transition: transform 0.5s;
+   width: 100%;
+   object-fit: cover;
+}
+
+.articles-item__image:hover {
+   transform: scale(1.05);
+}
+
+.link-articles {
+   color: #212121;
+}
+.link-articles:hover {
+   color: #006977;
+}
+.articles-descr {
+   max-width: 893px;
+   margin-top: 16px;
+}
+.articles-title {
+   margin-top: 24px;
+}
+.articles__text {
+   margin-top: 12px;
+   margin-bottom: 16px;
+}
+
+
+/* footer */
+.footer {
+   background-color: #212121;
+   margin-top: 60px;
+}
+
+.footer__container {
+   max-width: 1120px;
+}
+.footer__top {
+   display: flex;
+   padding: 30px 0;
+   gap: 30px;
+}
+
+.top-title {
+   font-weight: 600;
+   line-height: 1.50;
+   color: #f6f7f8;
+}
+
+.footer__body {
+   border-top: 1px solid #707070;
+   padding-block: 24px;
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 48px;
+}
+
+.footer__nav {
+   flex: 1;
+}
+
+.nav-footer__title {
+   color: #f6f7f8;
+   margin-bottom: 10px;
+}
+
+.nav-footer__item {
+   margin-bottom: 10px;
+}
+
+.nav-footer__link {
+   font-size: 14px;
+   line-height: 1.43;
+   color: #c5c4c4;
+}
+.nav-copy__item {
+   color: #fff;
+   font-size: 14px;
+   line-height: 1.43;
+}
+
+.nav-footer__link:hover {
+   text-decoration: underline;
+}
+
+.footer__bottom {
+   padding-block: 12px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.footer__copy {
+   color: #c5c4c4;
+}
+
+.social-title {
+   color: #f6f7f8;
+   padding-block: 12px;
+}
+
+.social {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: 32px;
+   
+}
+.footer__app{
+   display: flex;
+   align-items: flex-end;
+   column-gap: 32px;
+}
+.nav-footer__copy {
+   display: flex;
+   gap: 24px;
+   padding-block: 40px;
 }
 
 
