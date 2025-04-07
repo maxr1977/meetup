@@ -2,19 +2,14 @@
 .button {
    border-radius: 8px;
    background-color: #00798a;
-
    transition: all 0.3s;
-
    padding-inline: 16px;
    padding-block: 8px;
-
    text-align: center;
    color: #fff;
-
    font-size: 16px;
    font-weight: 400;
    line-height: 1.5;
-   
 }
 
 .button:hover {
@@ -113,4 +108,55 @@
       line-height: 1.43;
       letter-spacing: -0.02em;
       text-transform: uppercase;
+}
+
+/* 768px */
+@media (max-width: 768px) {
+   .title_h1 {
+      font-size: 38px;
+  }
+  .button {
+     padding-inline: 36px;
+  }
+  .button--mini {
+    padding-inline: 16px;
+   }
+   .button--red {
+      padding-inline: 66px;
+   }
+   
+}
+
+/* 393px */
+@media (max-width: 393px) {
+
+   .button {
+      padding-inline: 26px;
+   }
+   .button--mini {
+      font-size: 12px;
+      padding-inline: 12px;
+      padding-block: 6px;
+      line-height: 1.42;
+   }
+      .button--red {
+         padding-inline: 66px;
+      }
+   .title_h1 {
+      font-size: 25px;
+      line-height: 1.22;
+   }
+
+   .title_h2 {
+      font-size: 20px;
+      line-height: 1.8;
+}
+
+.title_h3 {
+      font-size: 14px;
+      line-height: 1.40;
+}
+
+
+
 }
