@@ -1,11 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Second page</title>
-</head>
-<body>
-   
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second page</title>
+    <link rel="stylesheet" href="./styles/page2.css" />
+    <script src="./scripts/page2.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="index.html" class="header__link-logo">
+            <img src="./assets/img/svg/logo.svg" alt="meetup" />
+          </a>
+          <div class="header__search">
+            <div class="search-form">
+              <form class="search-form__item">
+                <input
+                  type="text"
+                  class="search-form__input"
+                  placeholder="Search events"
+                />
+                <div class="search-form__location">Mountain View, CA</div>
+                <button type="submit" class="search-form__button">
+                  <img src="./assets/img/svg/search_whait.svg" alt="search" />
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="header__actions actions-header">
+            <a href="#" class="actions-header__link-language link"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.0003 17.0837C10.7695 17.0837 11.6793 16.5575 12.464 15.2497C12.6935 14.8673 12.9004 14.4342 13.0779 13.9587H6.92273C7.10022 14.4342 7.30719 14.8673 7.53666 15.2497C8.32132 16.5575 9.23116 17.0837 10.0003 17.0837ZM6.54964 12.7087C6.35852 11.8802 6.25033 10.9676 6.25033 10.0003C6.25033 9.03308 6.35852 8.12042 6.54964 7.29199H13.451C13.6422 8.12042 13.7503 9.03308 13.7503 10.0003C13.7503 10.9676 13.6422 11.8802 13.451 12.7087H6.54964ZM14.4013 13.9587C14.1162 14.8377 13.7389 15.6216 13.2912 16.2744C14.3324 15.7272 15.2207 14.9283 15.8753 13.9587H14.4013ZM16.5474 12.7087H14.7303C14.9053 11.8595 15.0003 10.9484 15.0003 10.0003C15.0003 9.05224 14.9053 8.14113 14.7303 7.29199H16.5474C16.893 8.12634 17.0837 9.04108 17.0837 10.0003C17.0837 10.9596 16.893 11.8743 16.5474 12.7087ZM5.27032 12.7087H3.4532C3.10768 11.8743 2.91699 10.9596 2.91699 10.0003C2.91699 9.04108 3.10768 8.12634 3.4532 7.29199H5.27032C5.09533 8.14113 5.00033 9.05224 5.00033 10.0003C5.00033 10.9484 5.09533 11.8595 5.27032 12.7087ZM4.12535 13.9587H5.5993C5.88452 14.8377 6.26176 15.6216 6.70951 16.2744C5.66828 15.7272 4.77994 14.9283 4.12535 13.9587ZM6.92273 6.04199H13.0779C12.9004 5.56643 12.6935 5.13333 12.464 4.75089C11.6793 3.44313 10.7695 2.91699 10.0003 2.91699C9.23116 2.91699 8.32132 3.44313 7.53666 4.75089C7.30719 5.13333 7.10022 5.56643 6.92273 6.04199ZM14.4013 6.04199H15.8753C15.2207 5.07234 14.3324 4.27348 13.2912 3.72621C13.7389 4.3791 14.1162 5.16299 14.4013 6.04199ZM6.70951 3.72621C6.26176 4.37911 5.88451 5.16299 5.5993 6.04199H4.12534C4.77994 5.07234 5.66828 4.27348 6.70951 3.72621ZM10.0003 1.66699C14.6027 1.66699 18.3337 5.39795 18.3337 10.0003C18.3337 14.6027 14.6027 18.3337 10.0003 18.3337C5.39795 18.3337 1.66699 14.6027 1.66699 10.0003C1.66699 5.39795 5.39795 1.66699 10.0003 1.66699Z"
+                  fill="#212121"
+                  class="svg-language"
+                /></svg
+              >English</a
+            >
+            <a
+              href="#"
+              class="actions-header__button button button--transparent button--mini"
+              >Log In</a
+            >
+            <a href="#" class="actions-header__button button button--mini"
+              >Sign up</a
+            >
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="events">
+          <div class="events__container">
+            <div class="events__display">
+              <div>
+                <div class="events__header">
+                  <h2 class="title_h2">Events near New York, NY</h2>
+                  <a href="#" class="event-link link">
+                    <p class="medium text-green link">Events</p>
+                  </a>
+                </div>
+                <div class="events__items">
+                  <div class="filters">
+                    <div class="filter-group">
+                      <select id="type-filter">
+                        <option value="any">Any type</option>
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                      </select>
+                    </div>
+
+                    <div class="filter-group">
+                      <select id="distance-filter">
+                        <option value="any">Any distance</option>
+                        <option value="10">Up to 10 km</option>
+                        <option value="25">Up to 25 km</option>
+                        <option value="50">Up to 50 km</option>
+                        <option value="75">Up to 75 km</option>
+                        <option value="100">Up to 100 km</option>
+                      </select>
+                    </div>
+
+                    <div class="filter-group">
+                      <select id="category-filter">
+                        <option value="any">Any category</option>
+                        <!-- Categories will be populated by JavaScript -->
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="events-container" id="events-container">
+                    <!-- Events will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="map__content">
+                <p>Find events near</p>
+                <h2 class="title_h3">New York, NY</h2>
+                <div class="map__img">
+                  <img src="./assets/img/png/map.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__top">
+            <p class="top-title">Create your own Meetup group.</p>
+            <div class="footer__button-btn">
+              <a href="#" class="footer__button button button--white-border"
+                >Get Started</a
+              >
+            </div>
+          </div>
+          <div class="footer__body">
+            <div class="footer__nav nav-footer">
+              <div class="nav-footer__title">Your Account</div>
+              <ul class="nav-footer__list">
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Sign up</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Log in</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Help</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Become an Affiliate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav nav-footer">
+              <div class="nav-footer__title">Discover</div>
+              <ul class="nav-footer__list">
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Groups</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Calendar</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Topics</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Cities</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Online Events</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Local Guides</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Make Friends</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav nav-footer">
+              <div class="nav-footer__title">Meetup</div>
+              <ul class="nav-footer__list">
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">About</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Blog</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Meetup Pro</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Careers</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Apps</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a href="#" class="nav-footer__link">Podcast</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__social">
+              <p class="social-title">Follow us</p>
+              <ul class="footer__social social">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <img src="assets/img/svg/Facebook.svg" alt="Image" />
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <img src="assets/img/svg/twitter.svg" alt="Image" />
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <img src="assets/img/svg/YouTube.svg" alt="Image" />
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <img src="assets/img/svg/Instagram.svg" alt="Image" />
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <img src="assets/img/svg/TikTok.svg" alt="Image" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__app">
+              <ul class="footer__app app">
+                <li class="app__item">
+                  <a href="#" class="app__link">
+                    <img src="assets/img/svg/Google_Play.svg" alt="Image" />
+                  </a>
+                </li>
+                <li class="app__item">
+                  <a href="#" class="app__link">
+                    <img src="assets/img/svg/app.svg" alt="Image" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <ul class="nav-footer__copy">
+              <li class="nav-copy__item">© 2023 Meetup</li>
+              <li class="nav-footer__item">
+                <a href="#" class="nav-footer__link">Terms of Service</a>
+              </li>
+              <li class="nav-footer__item">
+                <a href="#" class="nav-footer__link">Privacy Policy</a>
+              </li>
+              <li class="nav-footer__item">
+                <a href="#" class="nav-footer__link"
+                  >Do Not Sell or Share My Personal Data</a
+                >
+              </li>
+              <li class="nav-footer__item">
+                <a href="#" class="nav-footer__link">Cookie Policy</a>
+              </li>
+              <li class="nav-footer__item">
+                <a href="#" class="nav-footer__link">Help</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

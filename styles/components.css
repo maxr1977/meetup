@@ -54,7 +54,7 @@
    background-color: #ac0a38;
 }
 
-/* ------------------------- */
+/* font */
 .title_h1 {
    font-weight: 700;
    font-size: 42px;
@@ -127,6 +127,11 @@
    
 }
 
+@media (max-width: 510px) {
+   .button--white-border {
+      padding-inline: 14px;
+}
+}
 /* 393px */
 @media (max-width: 393px) {
 
@@ -142,6 +147,10 @@
       .button--red {
          padding-inline: 66px;
       }
+   .button--white-border {
+      padding-inline: 14px;
+   }
+
    .title_h1 {
       font-size: 25px;
       line-height: 1.22;
@@ -156,7 +165,5 @@
       font-size: 14px;
       line-height: 1.40;
 }
-
-
 
 }

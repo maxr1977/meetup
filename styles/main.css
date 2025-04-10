@@ -165,6 +165,9 @@ input.search-form__input {
       width: 100%;
       max-width: 592px;
    }
+   .search-form__location {
+      display: block;
+}
 }
 
 /* 480px */
@@ -341,7 +344,7 @@ border-radius: 8px;
    margin-top: 12px;
    display: flex;
    flex-direction: column;
-   gap: 8px;
+   gap: 2px;
 }
 
 
@@ -415,6 +418,18 @@ border-radius: 8px;
    .item-event__image {
          margin-top: 10px;
    }
+.date {
+   order: 1;
+}
+
+.title_h3 {
+   order: 2;
+}
+
+.category {
+   order: 3;
+}
+
 }
 
 
@@ -524,13 +539,14 @@ border-radius: 8px;
 }
 
 
+
 /* section cities */
 .cities__items {
-   margin-top: 28px;
-   display: grid;
+   display: flex;
    gap: 41px;
-   grid-template-columns: repeat(auto-fill, minmax(min(205px, 100%), 1fr));
-   justify-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 26px;
    
 }
 
@@ -540,6 +556,7 @@ border-radius: 8px;
    align-items: center;
    text-align: center;
    gap: 25px;
+   
 }
 .cities-item__link-image {
    display: block;
@@ -573,29 +590,96 @@ border-radius: 8px;
    margin-top: 20px;
 }
 
+@media (max-width: 580px) {
+   .cities__items {
+      gap: 25px;
+   }
+   
+   .cities-item__image {
+      max-width: 180px;
+   }
+}
+
+@media (max-width: 420px) {
+   .cities__items {
+      gap: 17.5px;
+   }
+
+   .cities-item__image {
+      max-width: 154px;
+   }
+}
+
+@media (max-width: 393px) {
+   .cities__items {
+      margin-top: 10px;
+   }
+   .cities-descr {
+   margin-top: 5px;
+   }
+   
+}
+
 /* section work */
 .work__items {
    display: flex;
    gap: 32px;
    margin-top: 26px;
-   flex-wrap: wrap;
+   justify-content: center;
 }
 
 .work__item {
    display: flex;
-   padding: 32px 112px 32px 24px;
+   padding: 32px 24px 32px 24px;
    background: rgba(151, 202, 209, 0.08);
    border-radius: 8px;
    gap: 24px;
    align-items: flex-start;
    justify-content: flex-start;
+   max-width: 580px;
+   width: 100%;
 }
 .work__content{
    display: flex;
    flex-direction: column;
    gap: 16px;
+   max-width: 379px;
+}
+/* 800px */
+@media (max-width: 800px) {
+  .work__items {
+   flex-wrap: wrap;
+   } 
+   .work__item {
+      max-width: 670px;
+   }
 }
 
+/* 393px */
+@media (max-width: 393px) {
+.work__item img{
+   max-width: 25.5px;
+}
+.work__item {
+   gap: 15px;
+   padding: 19px 30px 15px 15px;
+}
+.work__content {
+   gap: 10px;
+}
+.work__content h3 {
+font-size: 12px;
+line-height: 1.24;
+}
+.work__title {
+   font-size: 9px;
+   line-height: 1.50;
+}
+.work-link p {
+   font-size: 10px;
+   line-height: 1.49;
+}
+}
 
 /* section articles */
 .articles__items {
@@ -639,7 +723,26 @@ border-radius: 8px;
    margin-bottom: 16px;
 }
 
-
+/* 814px */
+@media (max-width: 814px) {
+.articles__items{
+   gap: 32px;
+   grid-template-columns: repeat(auto-fill, minmax(min(272px, 100%), 1fr));
+}
+}
+/* 393px */
+@media (max-width: 393px) {
+   .articles-descr {
+      display: none;
+   }
+   .articles-title {
+      font-size: 16px;
+      line-height: 168%;
+   }
+   .articles__text {
+      line-height: 1.92;
+   }
+}
 /* footer */
 .footer {
    background-color: #212121;
@@ -732,28 +835,48 @@ border-radius: 8px;
    padding-block: 40px;
 }
 
-
-/* @media (max-width: 393px) {
-  .header__search {
-   display: none;
-  }
-
-   .meetup__display {
-   grid-template-columns: 1fr;
-   row-gap: 20px;
-   }
-   .event-link {
+@media (max-width: 510px) {
+   .nav-footer__copy .nav-footer__link {
       display: none;
    }
-   .title_h2 {
-      font-size: 20px;
+   .footer__top {
+      gap: 20px;
    }
-   .title_h3 {
-      font-size: 13px;
+   .footer__body{
+      column-gap: 20px;
    }
-
-   .location img {
-      width: 16px;
-      height: 16px;
+   .nav-footer__link {
+      white-space: nowrap;
+      display: inline-block;
    }
-} */
+   
+   .nav-footer__item {
+   flex-shrink: 0;
+   }
+}
+ 
+@media (max-width: 393px) {
+   .top-title {
+      font-size: 16px;
+   }
+   .footer__top {
+      flex-wrap: wrap;
+   }
+   .nav-footer__title {
+      font-size: 16px;
+      line-height: 1.5;
+   }
+   .footer__body {
+      column-gap: 10px;
+   }
+   .footer__bottom {
+      padding-block: 0;
+   }
+   .footer__app {
+      display: none;
+   }
+   .footer__social p {
+      font-size: 16px;
+      line-height: 1.50;
+   }
+}
